@@ -1,0 +1,33 @@
+{
+  "name": "resoauth/nextcloud-soca-plugin",
+  "description": "SOCA OIDC and CIMD login app for Nextcloud",
+  "type": "project",
+  "license": "AGPL-3.0-only",
+  "require": {
+    "php": ">=8.3",
+    "ext-openssl": "*",
+    "ext-curl": "*",
+    "firebase/php-jwt": "^7.2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "OCA\\Soca\\": "lib/",
+      "RESOAuth\\Soca\\": "lib/soca/src/",
+      "RESOAuth\\SocaHost\\": "lib/bridge/"
+    }
+  },
+  "scripts": {
+    "test": [
+      "@php tests/run.php",
+      "@php tests/host.php",
+      "@php tests/lint.php"
+    ]
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {},
+    "platform": {
+      "php": "8.3.0"
+    }
+  }
+}
