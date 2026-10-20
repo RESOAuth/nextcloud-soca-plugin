@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+  <id>soca</id><name>SOCA</name><summary>SOCA OIDC and CIMD sign-in</summary>
+  <description>Deployment managed OpenID Connect login with PKCE, private_key_jwt, candidate tests and explicit account links.</description>
+  <version>0.1.0</version><licence>agpl</licence><author>RESOAuth</author><namespace>Soca</namespace>
+  <category>security</category><website>https://github.com/RESOAuth/nextcloud-soca-plugin</website>
+  <bugs>https://github.com/RESOAuth/nextcloud-soca-plugin/issues</bugs>
+  <dependencies><php min-version="8.3"/><nextcloud min-version="33" max-version="33"/></dependencies>
+  <commands><command>OCA\Soca\Command\Manage</command></commands>
+  <background-jobs><job>OCA\Soca\BackgroundJob\Cleanup</job></background-jobs>
+  <settings><admin>OCA\Soca\Settings\Admin</admin></settings>
+</info>
